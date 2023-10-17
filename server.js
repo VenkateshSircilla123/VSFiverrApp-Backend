@@ -32,6 +32,7 @@ const connect = async()=>{
     
 }
 
+app.use('/', "hello")
 app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
 app.use('/api/conversations', conversationRoute)
