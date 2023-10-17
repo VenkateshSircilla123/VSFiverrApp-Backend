@@ -12,6 +12,17 @@ export const getGig = async(req, res,next)=>{
     
 }
 
+export const test = async(req, res,next)=>{
+    try {
+        const gig = await Gig.find()
+        
+        res.status(200).send(gig)
+    } catch (error) {
+        next(error)
+    }
+    
+}
+
 export const getGigs = async(req, res, next)=>{
     const q = req.query;
 
