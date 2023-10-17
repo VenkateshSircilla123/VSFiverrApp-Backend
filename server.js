@@ -19,7 +19,7 @@ const router = Router()
 dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({ origin: ["http://localhost:5173", 'https://vsfiverrapp.onrender.com'], credentials: true }))
+app.use(cors({ origin: ["http://localhost:5173", "https://vs-fiverr-app-frontend.vercel.app"], methods: ["POST", "GET"], credentials: true }))
 
 const connect = async()=>{
     
