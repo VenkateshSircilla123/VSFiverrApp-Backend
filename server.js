@@ -32,7 +32,9 @@ const connect = async()=>{
     
 }
 
-app.use('/', "hello")
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
 app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
 app.use('/api/conversations', conversationRoute)
