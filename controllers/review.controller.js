@@ -28,12 +28,12 @@ export const createReview = async (req, res, next) => {
   
       //TODO: check if the user purchased the gig.
   
-      const savedReview = await newReview.save();
+      await newReview.save();
   
       await Gig.findByIdAndUpdate(req.body.gigId, {
         $inc: { totalStars: req.body.star, starNumber: 1 },
       });
-      res.status(201).send(savedReview);
+      res.status(201).send('review created');
     } catch (err) {
         console.log(err)
       next(err);
