@@ -3,6 +3,7 @@ import Review from '../models/review.model.js'
 import createError from '../utils/createError.js'
 
 export const createReview = async (req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://vs-fiverr-app-frontend.vercel.app');
     if (req.isSeller)
       return next(createError(403, "Sellers can't create a review!"));
     
