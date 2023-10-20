@@ -18,6 +18,7 @@ export const createReview = async (req, res, next) => {
         gigId: req.body.gigId,
         userId: req.userId,
       });
+        console.log(review)
   
       if (review)
         return next(
@@ -33,6 +34,7 @@ export const createReview = async (req, res, next) => {
       });
       res.status(201).send(savedReview);
     } catch (err) {
+        console.log(err)
       next(err);
     }
   };
