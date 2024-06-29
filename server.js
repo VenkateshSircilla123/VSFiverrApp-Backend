@@ -20,7 +20,7 @@ dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: ["https://vs-fiverr-app-frontend.vercel.app","https://vsfiverrapp1.onrender.com"],
+  origin: ["https://vs-fiverr-app-frontend.vercel.app","https://fiver-clone-six.vercel.app"],
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Content-Type, Authorization",
